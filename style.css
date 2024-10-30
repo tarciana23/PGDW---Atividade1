@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #004A61;
+    --secondary-color: #FFBB00;
+    --text-color: #FFFFFF;
+    --base-size: 16px;
+    font-size: 1rem; /* 1rem = 16px */
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    border: 0.063rem solid var(--border-color);
+    overflow: hidden;
+}
+
+.image-section {
+    flex: 1;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-section img {
+    width: 82%;
+    height: auto;
+    object-fit: cover;
+    max-height: 100%;
+}
+
+.form-section {
+    flex: 1;
+    width: 50%;
+    padding: 1.25rem;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.form-title {
+    font-size: 2.25rem;
+    font-weight: 700;
+    margin-bottom: 1.25rem;
+    text-align: center;
+}
+
+.form-title strong {
+    color: var(--secondary-color);
+}
+
+.form-section form {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-group {
+    margin-bottom: 0.938rem;
+    width: 100%;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 0.313rem;
+    font-weight: bold;
+}
+
+.form-input {
+    width: 100%;
+    padding: 0.625rem;
+    border: 0.063rem solid var(--input-border-color);
+    border-radius: 0.25rem;
+}
+
+.form-button {
+    width: 50%;
+    padding: 0.625rem;
+    border: none;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    font-size: 1rem;
+    font-weight: bold;
+    margin-top: 1rem;
+    cursor: pointer;
+    border-radius: 0.25rem;
+    transition: opacity 0.3s ease;
+}
+
+.form-button:hover {
+    opacity: 0.8;
+}
+
+.register-link {
+    text-align: center;
+    margin-top: 0.625rem;
+}
+
+.register-link a {
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+
+.register-link a:hover {
+    text-decoration: underline;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .image-section {
+        display: none;
+    }
+
+    .form-section {
+        width: 100%;
+        padding: 1.25rem;
+    }
+}
