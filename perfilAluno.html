@@ -6,7 +6,7 @@
     <title>Cadastro de Perfil do Aluno</title>
     <link rel="stylesheet" href="cadastroAluno.css">
 </head>
-<body>
+<body data-page="perfil">
     <nav class="navbar">
         <div class="navbar-logo">
             <h2>EnsinaFuturo</h2>
@@ -22,25 +22,45 @@
 
     <div class="profile-container">
         <h2 class="profile-title">Perfil do estudante</h2>
-        <form action="#" method="POST" class="profile-form">
+            <form  action="#" method="POST" class="profile-form">
+                <div class="form-group">
+                    <label for="nome">Nome</label>
+                    <input type="text" id="nome" name="nome" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="dataNascimento">Data de Nascimento</label>
+                    <input type="date" id="dataNascimento" name="dataNascimento" required>
+                </div>
+                <div class="form-group">
+                    <label for="telefone">Telefone</label>
+                    <input type="text" id="telefone" name="telefone" required>
+                    <span id="telefoneError" class="error-message"></span>
+                </div>
             <div class="form-group">
-                <label for="nome">Nome</label>
-                <input type="text" id="nome" name="nome" required>
+                <label for="serie">Série Escolar</label>
+                <select id="serie" name="serie" required>
+                    <option value="">Selecione uma série</option>
+                    <option value="1a">1ª Série</option>
+                    <option value="2a">2ª Série</option>
+                    <option value="3a">3ª Série</option>
+                    <option value="4a">4ª Série</option>
+                    <option value="5a">5ª Série</option>
+                    <option value="6a">6ª Série</option>
+                    <option value="7a">7ª Série</option>
+                    <option value="8a">8ª Série</option>
+                    <option value="9a">9ª Série</option>
+                    <option value="1ano">1º Ano</option>
+                    <option value="2ano">2º Ano</option>
+                    <option value="3ano">3º Ano</option>
+                </select>
             </div>
-            <div class="form-group">
-                <label for="idade">Idade</label>
-                <input type="number" id="idade" name="idade" required>
-            </div>
-            <div class="form-group">
-                <label for="objetivos">Objetivos de Estudo</label>
-                <textarea id="objetivos" name="objetivos" rows="3" required placeholder="Descreva seus objetivos de estudo..."></textarea>
-            </div>
-            <div class="form-group">
-                <label for="interesses">Áreas de Interesse</label>
-                <input type="text" id="interesses" name="interesses" required placeholder="Ex.: Matemática, Física, Redação">
-            </div>
-            <button type="submit" class="form-button">Salvar Perfil</button>
+            <button type="submit" class="form-button">Salvar</button>
         </form>
     </div>
+    <script src="./script.js"></script>
 </body>
 </html>
